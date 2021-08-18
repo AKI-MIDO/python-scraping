@@ -29,9 +29,11 @@ login_button.click()
 '''
 
 #簡易ポータルから通常ポータルへ移動
-potal_move = driver.find_element_by_xpath('cssセクレター')
+potal_move = driver.find_element_by_xpath('------')
 potal_move.click()
 
 #インフォメーションの項目に移動
-imformation = driver.find_element_by_id('quick')
+imformation = driver.find_element_by_xpath('-----')
 imformation.click()
+
+#インフォメーションの項目から最新の情報をゲット！
