@@ -1,5 +1,5 @@
 from selenium import webdriver
-
+import time
 
 '''
 ポータルサイトへの自動ログイン
@@ -19,6 +19,9 @@ id.send_keys("ログイン")
 password = driver.find_element_by_id("passwordId")
 password.send_keys("パスワード")
 
+#ここでページが変わるのでIdやパスワードを確実に入力させるためにsleep
+time.sleep(0.5)
+
 #上記でIDとパスワードを入力後にログインのボタンを押すイベントを発生
 login_button = driver.find_element_by_id('loginPost')
 login_button.click()
@@ -37,3 +40,7 @@ imformation = driver.find_element_by_xpath('-----')
 imformation.click()
 
 #インフォメーションの項目から最新の情報をゲット！
+new_info = driver.find_element_by_xpath('-------------')
+new_infomation=new_info.text
+
+#ここからline notifyと連携していく。
