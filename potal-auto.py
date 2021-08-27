@@ -40,7 +40,9 @@ imformation = driver.find_element_by_xpath('-----')
 imformation.click()
 
 #インフォメーションの項目から最新の情報をゲット！
-new_info = driver.find_element_by_xpath('-------------')
-new_infomation=new_info.text
+#new_info = driver.find_element_by_xpath('-------------')
+#new_infomation=new_info.text
 
 #ここからline notifyと連携していく。
+
+#xpathがうまく起動しないのでBeautifulSoupを使ってここからは進めていく！
